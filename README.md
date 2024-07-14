@@ -14,6 +14,6 @@ Formerly named vmess2json, is one of the scripts in the project.
 ```sh
 cat ./ghelper_proxy | ./vmess2json.py --select 1 > v2ray_config.json
 vim v2ray_config.json # delete error message
-V2RAY_LOCATION_ASSET=/etc/v2ray v2ray -config v2ray_config.json &
+V2RAY_LOCATION_ASSET=/etc/v2ray v2ray -config v2ray_config.json > /dev/null 2>&1 &
 export http_proxy=http://127.0.0.1:8123; export https_proxy=http://127.0.0.1:8123; export all_proxy=socks5://127.0.0.1:8123
 ```

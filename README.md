@@ -9,3 +9,11 @@ Formerly named vmess2json, is one of the scripts in the project.
 * [vmesseditor](https://github.com/boypt/vmess2json/wiki/vmesseditor) - editor for a `vmess://` or a subscription
 * [vmesssed](https://github.com/boypt/vmess2json/wiki/vmesssed) - editor for `vmess://` subscription, like `sed` command works for batch job
 * [vmessviewer](https://github.com/boypt/vmess2json/wiki/vmessviewer) - viewer for `vmess://` or subscription
+
+
+```sh
+cat ./ghelper_proxy | ./vmess2json.py --select 1 > v2ray_config.json
+vim v2ray_config.json # delete error message
+V2RAY_LOCATION_ASSET=/etc/v2ray v2ray -config v2ray_config.json &
+export http_proxy=http://127.0.0.1:8123; export https_proxy=http://127.0.0.1:8123; export all_proxy=socks5://127.0.0.1:8123
+```
